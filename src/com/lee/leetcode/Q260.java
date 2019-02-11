@@ -1,5 +1,7 @@
 package com.lee.leetcode;
 
+import java.util.Arrays;
+
 /**
  * @author lipan
  * @date 2019/1/28 15:35
@@ -19,23 +21,25 @@ public class Q260 {
 //    你的算法应该具有线性时间复杂度。你能否仅使用常数空间复杂度来实现？
 
     public static int[] singleNumber(int[] nums) {
+        StringBuilder temp = new StringBuilder();
+        for(int i=0;i<nums.length;i++){
+            String num = String.valueOf(nums[i]);
+            if(temp.indexOf(num) <= -1){
+                temp.append(",").append(num);
+            }else{
+                num = "," + num;
+                int index = temp.indexOf(num);
+                temp.delete(index, index + num.length());
+            }
+        }
+        String[] resultStr = temp.toString().substring(1, temp.length()).split(",");
         int[] result = new int[2];
-//        int count = 0;
-//        for(int i=0;i<nums.length;i++){
-//            int temp = nums[i];
-//            for(int j=0;j<nums.length;j++){
-//                if(i == j){
-//                    continue;
-//                }
-//                if(nums[i] == nums[j]){
-//
-//                }
-//            }
-//        }
+        result[0] = Integer.valueOf(resultStr[0]);
+        result[1] = Integer.valueOf(resultStr[1]);
         return result;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(Arrays.toString(singleNumber(new int[]{1,2,1,3,2,5})));
     }
 }
