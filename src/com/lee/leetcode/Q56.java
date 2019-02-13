@@ -33,12 +33,7 @@ public class Q56 {
     }
 
     public static List<Interval> merge(List<Interval> intervals) {
-        intervals = intervals.stream().sorted(new Comparator<Interval>() {
-            @Override
-            public int compare(Interval o1, Interval o2) {
-                return o1.start - o2.start;
-            }
-        }).collect(Collectors.toList());
+        intervals = intervals.stream().sorted(Comparator.comparingInt(o -> o.start)).collect(Collectors.toList());
         List<Interval> result = new ArrayList<>();
         for(int i=0;i<intervals.size();i++){
             Interval interval = intervals.get(i);
