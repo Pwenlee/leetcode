@@ -1,7 +1,7 @@
 package com.lee.leetcode;
 
 /**
- * @author lipan
+ * @author Pwenlee
  * @date 2019/2/12 14:43
  * @description
  */

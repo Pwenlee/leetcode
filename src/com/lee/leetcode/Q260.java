@@ -3,7 +3,7 @@ package com.lee.leetcode;
 import java.util.Arrays;
 
 /**
- * @author lipan
+ * @author Pwenlee
  * @date 2019/1/28 15:35
  * @description
  */
