@@ -22,20 +22,6 @@ public class Q556 {
 //    输出: -1
 
     public static int nextGreaterElement(int n) {
-        char[] value = String.valueOf(n).to;
-
-        for (int i=0; i<value.length-1 ; i++) {
-            if(value[i] < value[i+1]){
-
-                char[] rigth = Arrays.copyOfRange(value, i+1, value.length);
-                Arrays.stream
-
-                long newValue = Long.valueOf(new String(value));
-                if(newValue <= Integer.MAX_VALUE){
-                    return (int)newValue;
-                }
-            }
-        }
         return -1;
     }
 
