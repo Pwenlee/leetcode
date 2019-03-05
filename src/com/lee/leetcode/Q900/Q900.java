@@ -45,43 +45,53 @@ public class Q900 {
 //    每次调用 RLEIterator.next(int n) 都有 1 <= n <= 10^9 。
     static class RLEIterator {
 
-        private List<Long> keyList = null;
+    private int[] A;
 
-        private List<Integer> valueList = null;
+    private long index = 0;
+
+    public RLEIterator(int[] A) {
+        this.A = A;
+    }
+
+    public int next(int n) {
+        index = index + n;
+        long time = 0;
+        for (int i = 0; i < A.length; i = i + 2) {
+            if (A[i] != 0) {
+                time = time + A[i];
+                int value = A[i + 1];
+                if (time >= index) {
+                    return value;
+                }
+            }
+        }
+        return -1;
+    }
+}
+
+    class RLEIterator1 {
+
+        private int[] A;
 
         private long index = 0;
 
-        public RLEIterator(int[] A) {
-            long time = 0;
-            keyList = new ArrayList<>(A.length / 2);
-            valueList = new ArrayList<>(A.length / 2);
-            for(int i=0; i<A.length; i=i+2){
-                if(A[i] != 0) {
-                    time = time + A[i];
-                    int value = A[i + 1];
-                    keyList.add(time);
-                    valueList.add(value);
-                }
-            }
+        public RLEIterator1(int[] A) {
+            this.A = A;
         }
 
         public int next(int n) {
             index = index + n;
-            for (int i = 0; i < keyList.size(); i++) {
-                if(keyList.get(i) >= index){
-                    return valueList.get(i);
+            long time = 0;
+            for(int i=0; i<A.length; i=i+2){
+                if(A[i] != 0) {
+                    time = time + A[i];
+                    int value = A[i + 1];
+                    if (time >= index) {
+                        return value;
+                    }
                 }
             }
             return -1;
         }
-    }
-
-    public static void main(String[] args) {
-
-        RLEIterator x = new RLEIterator(new int[]{3,8,0,8,2,5});
-        System.out.println(x.next(2));
-        System.out.println(x.next(1));
-        System.out.println(x.next(1));
-        System.out.println(x.next(2));
     }
 }
