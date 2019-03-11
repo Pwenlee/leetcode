@@ -3,7 +3,7 @@ package com.lee.leetcode.Q700;
 import java.util.Arrays;
 
 /**
- * @author Administrator
+ * @author Pwenlee
  * @date 2019/3/4 21:07
  * @description
  */

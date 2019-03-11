@@ -1,7 +1,7 @@
 package com.lee.leetcode.Q400;
 
 /**
- * @author Administrator
+ * @author Pwenlee
  * @date 2019/2/21 21:20
  * @description
  */
