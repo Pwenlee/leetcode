@@ -3,7 +3,7 @@ package com.lee.leetcode.Q100;
 import java.util.Objects;
 
 /**
- * @author lipan
+ * @author Pwenlee
  * @date 2019/2/27 14:46
  * @description
  */

@@ -1,7 +1,7 @@
 package com.lee.leetcode.Q500;
 
 /**
- * @author lipan
+ * @author Pwenlee
  * @date 2019/2/15 16:35
  * @description
  */

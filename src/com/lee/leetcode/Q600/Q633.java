@@ -1,7 +1,7 @@
 package com.lee.leetcode.Q600;
 
 /**
- * @author lipan
+ * @author Pwenlee
  * @date 2019/2/27 16:09
  * @description
  */
