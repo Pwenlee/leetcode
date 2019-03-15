@@ -1,4 +1,4 @@
-package com.lee.leetcode.Q;
+package com.lee.leetcode.Q100;
 
 import java.util.*;
 import java.util.stream.Collectors;
