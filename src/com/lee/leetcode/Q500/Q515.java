@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
-
+import com.lee.leetcode.Common.TreeNode;
 /**
  * @author Pwenlee
  * @date 2019/2/14 15:05
@@ -25,13 +25,6 @@ public class Q515 {
 //            5   3   9
 //
 //    输出: [1, 3, 9]
-
-    static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-    }
 
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> result = new ArrayList<>();

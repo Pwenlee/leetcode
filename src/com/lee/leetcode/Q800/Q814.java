@@ -1,6 +1,7 @@
 package com.lee.leetcode.Q800;
 
 import java.util.Objects;
+import com.lee.leetcode.Common.TreeNode;
 
 /**
  * @author Pwenlee
@@ -31,13 +32,6 @@ public class Q814 {
 //    示例3:
 //    输入: [1,1,0,1,1,0,1,0]
 //    输出: [1,1,0,1,1,null,1]
-
-    class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-    }
 
     public static TreeNode pruneTree(TreeNode root) {
         if(Objects.isNull(root)){

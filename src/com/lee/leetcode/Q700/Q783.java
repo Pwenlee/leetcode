@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
+import com.lee.leetcode.Common.TreeNode;
 
 /**
  * @author Pwenlee
@@ -35,13 +36,6 @@ public class Q783 {
 //
 //    二叉树的大小范围在 2 到 100。
 //    二叉树总是有效的，每个节点的值都是整数，且不重复。
-
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
 
     public int minDiffInBST(TreeNode root) {
         List<Integer> list = new ArrayList<>();

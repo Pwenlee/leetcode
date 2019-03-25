@@ -1,6 +1,7 @@
 package com.lee.leetcode.Q600;
 
 import java.util.Objects;
+import com.lee.leetcode.Common.TreeNode;
 
 /**
  * @author Pwenlee
@@ -30,13 +31,6 @@ public class Q617 {
 //            / \   \
 //            5   4   7
 //    注意: 合并必须从两个树的根节点开始。
-
-     class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-     }
 
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if(Objects.isNull(t1)){

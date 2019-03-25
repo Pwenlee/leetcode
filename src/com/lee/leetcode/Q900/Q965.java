@@ -1,5 +1,7 @@
 package com.lee.leetcode.Q900;
 
+import com.lee.leetcode.Common.TreeNode;
+
 import java.util.Objects;
 
 /**
@@ -12,13 +14,6 @@ public class Q965 {
 //    如果二叉树每个节点都具有相同的值，那么该二叉树就是单值二叉树。
 //
 //    只有给定的树是单值二叉树时，才返回 true；否则返回 false。
-
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
 
     public boolean isUnivalTree(TreeNode root) {
         if(Objects.isNull(root)){

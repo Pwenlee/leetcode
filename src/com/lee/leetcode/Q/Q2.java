@@ -1,5 +1,7 @@
 package com.lee.leetcode.Q;
 
+import com.lee.leetcode.Common.ListNode;
+
 /**
  * @author Pwenlee
  * @date 2019/2/12 14:43
@@ -19,13 +21,7 @@ public class Q2 {
 //    输出：7 -> 0 -> 8
 //    原因：342 + 465 = 807
 
-    class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
-
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int flow = 0;
         ListNode result1 = new ListNode(0);
         ListNode result2 = result1;

@@ -1,6 +1,7 @@
 package com.lee.leetcode.Q600;
 
 import java.util.Arrays;
+import com.lee.leetcode.Common.TreeNode;
 
 /**
  * @author Pwenlee
@@ -31,13 +32,6 @@ public class Q654 {
 //    注意:
 //
 //    给定的数组的大小在 [1, 1000] 之间。
-
-    class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-    }
 
     public TreeNode constructMaximumBinaryTree(int[] nums) {
         if(null != nums && nums.length != 0){

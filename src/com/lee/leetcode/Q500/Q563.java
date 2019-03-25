@@ -1,5 +1,7 @@
 package com.lee.leetcode.Q500;
 
+import com.lee.leetcode.Common.TreeNode;
+
 /**
  * @author Pwenlee
  * @date 2019/1/28 15:44
@@ -29,13 +31,6 @@ public class Q563 {
 //
 //    任何子树的结点的和不会超过32位整数的范围。
 //    坡度的值不会超过32位整数的范围。
-
-    class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-    }
 
     public int findTilt(TreeNode root) {
         if(root == null){

@@ -1,5 +1,7 @@
 package com.lee.leetcode.Q200;
 
+import com.lee.leetcode.Common.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -24,13 +26,7 @@ public class Q234 {
 //    进阶：
 //    你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
 
-    class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
-
-    public boolean isPalindrome(ListNode head) {
+    public static boolean isPalindrome(ListNode head) {
         List<Integer> list = new ArrayList<>();
         while(Objects.nonNull(head)){
             list.add(head.val);
@@ -39,7 +35,7 @@ public class Q234 {
         return isPalindrome(list);
     }
 
-    private boolean isPalindrome(List<Integer> list){
+    private static boolean isPalindrome(List<Integer> list){
         if(list.size() == 1){
             return true;
         }
@@ -49,5 +45,10 @@ public class Q234 {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        System.out.println(isPalindrome(l1));
     }
 }

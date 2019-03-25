@@ -1,5 +1,7 @@
 package com.lee.leetcode.Q200;
 
+import com.lee.leetcode.Common.ListNode;
+
 /**
  * @author Pwenlee
  * @date 2019/2/25 20:19
@@ -29,11 +31,6 @@ public class Q237 {
 //    链表中所有节点的值都是唯一的。
 //    给定的节点为非末尾节点并且一定是链表中的一个有效节点。
 //    不要从你的函数中返回任何结果。
-    class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     public void deleteNode(ListNode node) {
         node.val = node.next.val;

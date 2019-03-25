@@ -1,5 +1,7 @@
 package com.lee.leetcode.Q600;
 
+import com.lee.leetcode.Common.TreeNode;
+
 /**
  * @author Pwenlee
  * @date 2019/2/12 14:43
@@ -38,13 +40,6 @@ public class Q606 {
 //
 //    解释: 和第一个示例相似，
 //    除了我们不能省略第一个对括号来中断输入和输出之间的一对一映射关系。
-
-    class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-    }
 
     public String tree2str(TreeNode t){
         if(null == t){

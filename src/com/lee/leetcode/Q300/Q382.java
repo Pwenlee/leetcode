@@ -2,6 +2,7 @@ package com.lee.leetcode.Q300;
 
 import java.util.Objects;
 import java.util.Random;
+import com.lee.leetcode.Common.ListNode;
 
 /**
  * @author Pwenlee
@@ -25,12 +26,6 @@ public class Q382 {
 //
 //    // getRandom()方法应随机返回1,2,3中的一个，保证每个元素被返回的概率相等。
 //    solution.getRandom();
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     static class Solution {
 
