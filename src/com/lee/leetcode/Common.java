@@ -55,4 +55,17 @@ public class Common {
         }
         return node;
     }
+
+    public static boolean isPowerOf2(long n){
+        return (n & (n-1)) == 0;
+    }
+
+    public static int getPowerOf2(long n){
+        int x = 0;
+        while (n > 1) {
+            n >>= 1;
+            x++;
+        }
+        return x;
+    }
 }

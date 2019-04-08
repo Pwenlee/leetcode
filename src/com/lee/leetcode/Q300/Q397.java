@@ -1,6 +1,7 @@
 package com.lee.leetcode.Q300;
 
-import java.util.*;
+import static com.lee.leetcode.Common.getPowerOf2;
+import static com.lee.leetcode.Common.isPowerOf2;
 
 /**
  * @author Pwenlee
@@ -58,19 +59,6 @@ public class Q397 {
             }
             return value;
         }
-    }
-
-    private static boolean isPowerOf2(long n){
-        return (n & (n-1)) == 0;
-    }
-
-    private static int getPowerOf2(long n){
-        int x = 0;
-        while (n > 1) {
-            n >>= 1;
-            x++;
-        }
-        return x;
     }
 
     public static void main(String[] args) {
