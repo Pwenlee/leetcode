@@ -1,5 +1,6 @@
 package com.lee.leetcode;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -39,6 +40,18 @@ public class Common {
 
         public TreeNode(int x) { val = x; }
 
+    }
+
+    public static class Node {
+        public int val;
+        public List<Node> children;
+
+        public Node() {}
+
+        public Node(int _val,List<Node> _children) {
+            val = _val;
+            children = _children;
+        }
     }
 
     public static ListNode reverse(ListNode l1){
