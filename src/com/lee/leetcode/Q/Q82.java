@@ -1,7 +1,6 @@
 package com.lee.leetcode.Q;
 
 import com.lee.leetcode.Common.ListNode;
-
 import java.util.Objects;
 
 /**
