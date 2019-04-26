@@ -53,9 +53,7 @@ public class Q451 {
         Map<Character, Integer> map = new HashMap<>();
         char[] chars = s.toCharArray();
         for (char c : chars) {
-            Integer count = map.getOrDefault(c, 0);
-            count++;
-            map.put(c, count);
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
         List<String> list = new ArrayList<>(map.size());
         for (Character c : map.keySet()) {
