@@ -70,7 +70,7 @@ public class Common {
     }
 
     public static boolean isPowerOf2(long n){
-        return (n & (n-1)) == 0;
+        return n > 0 && (n & (n-1)) == 0;
     }
 
     public static int getPowerOf2(long n){
