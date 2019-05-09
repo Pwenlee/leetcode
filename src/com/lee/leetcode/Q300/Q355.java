@@ -95,22 +95,16 @@ public class Q355 {
 
         /** Follower follows a followee. If the operation is invalid, it should be a no-op. */
         public void follow(int followerId, int followeeId) {
-            if(followerId != followeeId){
-                Set<Integer> followSet = followMap.getOrDefault(followerId, new HashSet<>());
-                followSet.add(followeeId);
-                followMap.put(followerId, followSet);
-            }
+            Set<Integer> followSet = followMap.getOrDefault(followerId, new HashSet<>());
+            followSet.add(followeeId);
+            followMap.put(followerId, followSet);
         }
 
         /** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
         public void unfollow(int followerId, int followeeId) {
-            if(followerId != followeeId){
-                if(followerId != followeeId){
-                    Set<Integer> followSet = followMap.getOrDefault(followerId, new HashSet<>());
-                    followSet.remove(followeeId);
-                    followMap.put(followerId, followSet);
-                }
-            }
+            Set<Integer> followSet = followMap.getOrDefault(followerId, new HashSet<>());
+            followSet.remove(followeeId);
+            followMap.put(followerId, followSet);
         }
     }
 
