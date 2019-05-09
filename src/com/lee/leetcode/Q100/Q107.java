@@ -2,9 +2,7 @@ package com.lee.leetcode.Q100;
 
 import com.lee.leetcode.Common.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * @author Pwenlee
@@ -30,6 +28,7 @@ public class Q107 {
 //            [9,20],
 //            [3]
 //            ]
+
 
     public static List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
@@ -59,6 +58,34 @@ public class Q107 {
             List<Integer> rootList = new ArrayList<>(1);
             rootList.add(root.val);
             list.add(rootList);
+        }
+        return list;
+    }
+
+    public static List<List<Integer>> levelOrderBottom1(TreeNode root) {
+        List<List<Integer>> list = new ArrayList<>();
+        if(Objects.nonNull(root)){
+            list = getTreeNodeLevelValueList(new ArrayList<>(Arrays.asList(root)));
+        }
+        return list;
+    }
+
+    private static List<List<Integer>> getTreeNodeLevelValueList(List<TreeNode> treeNodeList){
+        List<List<Integer>> list = new ArrayList<>();
+        if(Objects.nonNull(treeNodeList) && treeNodeList.size() > 0){
+            List<Integer> valueList = new ArrayList<>();
+            List<TreeNode> subNodeList = new ArrayList<>();
+            for (TreeNode treeNode : treeNodeList) {
+                valueList.add(treeNode.val);
+                if(Objects.nonNull(treeNode.left)){
+                    subNodeList.add(treeNode.left);
+                }
+                if(Objects.nonNull(treeNode.right)){
+                    subNodeList.add(treeNode.right);
+                }
+            }
+            list.addAll(getTreeNodeLevelValueList(subNodeList));
+            list.add(valueList);
         }
         return list;
     }
