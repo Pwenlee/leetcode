@@ -49,8 +49,10 @@ public class Q554 {
                 int sum = 0;
                 for (int i = 0; i < list.size() - 1; i++) {
                     sum = sum + list.get(i);
-                    map.put(sum, map.getOrDefault(sum, 0) + 1);
-                    value = Math.max(value, map.get(sum));
+                    int times = map.getOrDefault(sum , 0);
+                    times++;
+                    map.put(sum, times);
+                    value = Math.max(value, times);
                 }
             }
         }
