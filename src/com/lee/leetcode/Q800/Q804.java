@@ -43,7 +43,7 @@ public class Q804 {
     };
 
     public int uniqueMorseRepresentations(String[] words) {
-        Set<String> set = new HashSet<>();
+        Set<String> set = new HashSet<>(words.length);
         for (String word : words) {
             char[] chars = word.toCharArray();
             StringBuilder code = new StringBuilder();
