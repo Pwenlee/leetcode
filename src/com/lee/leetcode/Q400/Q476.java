@@ -35,13 +35,13 @@ public class Q476 {
 
     public int findComplement(int num) {
         long value = 2;
-        while(true) {
-            if(num == value){
-                return (int)(value - 1);
-            }else if(num < value){
-                return (int)(value - 1 - num);
-            }else{
-                value = value * 2;
+        while (true) {
+            if (num == value) {
+                return (int) (value - 1);
+            } else if (num < value) {
+                return (int) (value - 1 - num);
+            } else {
+                value = value >> 2;
             }
         }
     }
